@@ -1,0 +1,54 @@
+/* card animation */
+.otp-card{
+    animation:pop .7s ease;
+}
+
+@keyframes pop{
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.subtitle{
+    font-size:14px;
+    opacity:.7;
+    margin-bottom:20px;
+}
+
+/* otp inputs */
+.otp-box{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin:25px 0;
+}
+
+.otp{
+    width:48px;
+    height:60px;
+    font-size:24px;
+    text-align:center;
+    border-radius:14px;
+    border:2px solid transparent;
+    background:rgba(255,255,255,0.1);
+    color:white;
+    outline:none;
+    transition:.25s;
+}
+
+.otp:focus{
+    border:2px solid #22c55e;
+    box-shadow:0 0 15px #22c55e;
+    transform:scale(1.1);
+}
+
+.timer{
+    margin-top:10px;
+    opacity:.8;
+    font-size:14px;
+}

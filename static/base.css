@@ -1,0 +1,97 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#0f172a;
+    color:white;
+    overflow:hidden;
+}
+
+/* animated gradient background */
+.bg{
+    position:fixed;
+    width:200%;
+    height:200%;
+    z-index:-1;
+    filter:blur(90px);
+    background:
+        radial-gradient(circle at 20% 30%, #2563eb, transparent 40%),
+        radial-gradient(circle at 80% 70%, #9333ea, transparent 40%),
+        radial-gradient(circle at 50% 50%, #06b6d4, transparent 40%);
+    animation:moveBg 18s linear infinite;
+}
+
+@keyframes moveBg{
+    0%{ transform:translate(0,0); }
+    50%{ transform:translate(-20%,-10%); }
+    100%{ transform:translate(0,0); }
+}
+
+/* glass card */
+.card{
+    width:360px;
+    padding:35px;
+    border-radius:22px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(18px);
+    box-shadow:0 0 40px rgba(0,0,0,0.4);
+    text-align:center;
+}
+
+/* input */
+input{
+    width:100%;
+    padding:12px;
+    margin-top:12px;
+    border-radius:12px;
+    border:2px solid transparent;
+    outline:none;
+    background:rgba(255,255,255,0.1);
+    color:white;
+    font-size:15px;
+    transition:.25s;
+}
+
+input::placeholder{
+    color:rgba(255,255,255,.6);
+}
+
+input:focus{
+    border:2px solid #22c55e;
+    box-shadow:0 0 14px #22c55e;
+}
+
+/* button */
+button{
+    width:100%;
+    padding:12px;
+    margin-top:18px;
+    border:none;
+    border-radius:12px;
+    font-size:16px;
+    color:white;
+    cursor:pointer;
+    background:linear-gradient(45deg,#22c55e,#06b6d4);
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px #06b6d4;
+}
+
+#msg{
+    margin-top:12px;
+    font-weight:bold;
+}
+
+.error{color:#ef4444;}
+.success{color:#22c55e;}

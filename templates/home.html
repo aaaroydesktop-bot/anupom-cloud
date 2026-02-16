@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anupom Cloud</title>
+<link rel="stylesheet" href="/static/home.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>☁ Anupom Cloud</h2>
+
+        <button onclick="showSend()">📤 Send File</button>
+        <button onclick="loadInbox()">📥 Inbox</button>
+        <button onclick="loadMyFiles()">🗂 My Files</button>
+
+        <div class="user">
+            <p>{{user}}</p>
+            <a href="/logout">Logout</a>
+        </div>
+    </aside>
+
+
+    <!-- Main Panel -->
+    <main class="main">
+
+        <!-- SEND PAGE -->
+        <section id="sendPage" class="page active">
+            <h1>Send a File</h1>
+
+            <div class="uploadBox">
+                <input type="email" id="receiverEmail" placeholder="Receiver Email">
+                <input type="file" id="fileInput">
+
+                <button class="sendBtn" onclick="sendFile()">Send File</button>
+
+                <div id="uploadStatus"></div>
+
+                <!-- ⭐⭐⭐ এখানে বসবে -->
+                <div class="progress">
+                    <div id="progressBar"></div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- INBOX -->
+        <section id="inboxPage" class="page">
+            <h1>Inbox</h1>
+            <div id="inboxList" class="fileList"></div>
+        </section>
+
+
+        <!-- MY FILES -->
+        <section id="myfilesPage" class="page">
+            <h1>My Uploaded Files</h1>
+            <div id="myFilesList" class="fileList"></div>
+        </section>
+
+
+
+    </main>
+
+</div>
+
+<script src="/static/home.js"></script>
+</body>
+</html>

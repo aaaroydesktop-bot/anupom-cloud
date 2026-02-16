@@ -1,0 +1,38 @@
+.login-card{
+    animation:fadeIn .8s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.subtitle{
+    font-size:14px;
+    opacity:.7;
+    margin-bottom:15px;
+}
+
+.links{
+    display:flex;
+    justify-content:space-between;
+    margin-top:15px;
+}
+
+.links a{
+    text-decoration:none;
+    font-size:13px;
+    color:#93c5fd;
+    transition:.25s;
+}
+
+.links a:hover{
+    color:#38bdf8;
+    text-shadow:0 0 10px #38bdf8;
+}

@@ -1,0 +1,36 @@
+.reset-card{
+    animation:fade .6s ease;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.subtitle{
+    font-size:14px;
+    opacity:.7;
+    margin-bottom:20px;
+}
+
+.links{
+    margin-top:18px;
+}
+
+.links a{
+    text-decoration:none;
+    color:#93c5fd;
+    font-size:14px;
+    transition:.25s;
+}
+
+.links a:hover{
+    color:#22c55e;
+    text-shadow:0 0 8px #22c55e;
+}

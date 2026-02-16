@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OTP Verify</title>
+
+<!-- common style -->
+<link rel="stylesheet" href="{{ url_for('static', path='base.css') }}">
+
+<!-- otp page style -->
+<link rel="stylesheet" href="{{ url_for('static', path='otp.css') }}">
+
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="card otp-card">
+    <h2>Email Verification</h2>
+    <p class="subtitle">Enter the 6-digit code sent to your email</p>
+
+    <div class="otp-box" id="otpBox">
+        <input class="otp" type="text" maxlength="1" inputmode="numeric" autocomplete="one-time-code">
+        <input class="otp" type="text" maxlength="1" inputmode="numeric" autocomplete="one-time-code">
+        <input class="otp" type="text" maxlength="1" inputmode="numeric" autocomplete="one-time-code">
+        <input class="otp" type="text" maxlength="1" inputmode="numeric" autocomplete="one-time-code">
+        <input class="otp" type="text" maxlength="1" inputmode="numeric" autocomplete="one-time-code">
+        <input class="otp" type="text" maxlength="1" inputmode="numeric" autocomplete="one-time-code">
+
+
+    
+
+    </div>
+
+
+    <button onclick="verify()">Verify OTP</button>
+
+    <p id="msg"></p>
+    <div class="timer">
+        Code expires in <span id="timer">01:00</span>
+    </div>
+
+
+
+</div>
+
+<script src="{{ url_for('static', path='otp.js') }}"></script>
+</body>
+</html>
