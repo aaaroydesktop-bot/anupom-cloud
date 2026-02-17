@@ -1,8 +1,9 @@
-fastapi
-uvicorn
+fastapi==0.110.0
+uvicorn==0.27.1
 jinja2
 python-multipart
 sqlalchemy
-passlib[bcrypt]
-python-jose
+passlib[bcrypt]==1.7.4
+bcrypt==3.2.2
 email-validator
+python-jose
