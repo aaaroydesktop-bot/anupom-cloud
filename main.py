@@ -107,7 +107,23 @@ def send_otp_email(to_email, otp):
     sender_email = "testanupom@gmail.com"
     sender_password = "dkmgqjujdkxjuwus"
 
-    msg = MIMEText(f"Your OTP Code: {otp}")
+
+    msg = MIMEText(f"""
+    Hello 👋,
+
+    Welcome to Anupom Cloud ☁️
+
+    🔐 Your OTP Code: {otp}
+
+    ⏳ This code will expire in 5 minutes.
+    Please do NOT share this code with anyone.
+
+    If you didn’t request this login,
+    you can safely ignore this email.
+
+    — Anupom Cloud Security Team 🛡️
+    """)
+
     msg["Subject"] = "Verification OTP"
     msg["From"] = sender_email
     msg["To"] = to_email
