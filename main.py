@@ -104,8 +104,8 @@ def get_me(request: Request):
 
 # ================= EMAIL OTP =================
 def send_otp_email(to_email, otp):
-    sender_email = "testanupom@gmail.com"
-    sender_password = "dkmgqjujdkxjuwus"
+    sender_email = "aaaroydesktop@gmail.com"
+    sender_password = "ydufqdolcansefxo"
 
 
     msg = MIMEText(f"""
